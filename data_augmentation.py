@@ -10,14 +10,26 @@ we sequentially apply three simple augmentations:
 
 '''
 
-from  torchvision import transforms 
-def get_color_distortion(s=1.0):
-    #s is the  strength of color distortion
-    color_jitter =  transforms.ColorJitter(0.8*s, 0.8*s, 0.2*s)
-    rnd_color_jitter = trnasforms.RandomApply([color_jitter], p=0.8)
-    rnd_gray = transforms.RandomGrayscale(p=0.2)
-    color_distort = transforms.Compose([
-        rnd_color_jitter,
-        rnd_gray])
-    return color_distort
+from  torchvision import transforms
+
+class Augmentation:
+    def __init__(self, size):
+
+    s = 1 
+    color_jitter =  torchvision.transforms.ColorJitter(
+            0.8*s, 0.8*s, 0.8*s, 0.2*s
+    )
+
+    self.train_transform = torchvision.transforms.Compose(
+        [
+            torchvision.transforms.RandomResizedCrop(size=size),
+            torchvision.transforms.RandomHorizontalFlip(), 
+            torchvision.transforms.RandomApply([color_jitter], p=0.8),
+            torchvision.transforms.RnadomGrayscale(p=0.2), 
+            torchvision.transforms.ToTensor(),
+        ]
+    )
+
+    def __call__(self, x):
+        return self.train_transform(x)
 

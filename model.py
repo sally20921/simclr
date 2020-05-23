@@ -19,3 +19,11 @@ for all 1~2N
 
 #update  f and g 
 '''
+
+import torch.nn as nn
+import torchvision
+
+
+class SimCLR(nn.Module):
+    def __init__(self, args):
+
