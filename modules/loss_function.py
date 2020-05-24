@@ -17,7 +17,8 @@ import torch
 import torch.nn as nn
 import numpy as np
 
-class NTXentLoss(torch.nn.Module):
+class NT_Xent(torch.nn.Module):
+
     def __init__(self, device,  batch_size, temperature):
         super(NTXentLoss, self).__init__()
 

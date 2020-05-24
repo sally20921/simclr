@@ -19,7 +19,7 @@ for all 1~2N
 
 #update  f and g 
 '''
-
+import os 
 import torch.nn as nn
 import torchvision
 
@@ -52,3 +52,6 @@ class SimCLR(nn.Module):
         z =  nn.functional.normalize(z, dim=1)
 
         return h,z
+
+
+

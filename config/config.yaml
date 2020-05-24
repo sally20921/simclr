@@ -1,8 +1,16 @@
 #train options 
+batch_size: 256
+workers: 16
+start_epoch: 0
+epochs: 40
 
 #model options 
+resnet: "resnet18"
+normalize: True
+projection_dim: 64
 
 #loss options 
+temperature: 0.5
 
 
 
