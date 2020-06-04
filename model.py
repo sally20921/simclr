@@ -7,7 +7,7 @@ def load_model(args, loader):
     model=model.to(args.device)
 
     learning_rate  =  0.3 * args.batch_size /256
-     optimizer = LARS(
+    optimizer = LARS(
             model.parameters(),
             lr=learning_rate,
             weight_decay=args.weight_decay,
