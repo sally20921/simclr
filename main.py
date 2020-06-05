@@ -10,7 +10,7 @@ from model import load_model, save_model
 
 def train(args,  train_loader, model, criterion, optimizer):
     loss_epoch = 0
-    
+
     return loss_epoch
 
 def main(_run, _log):
