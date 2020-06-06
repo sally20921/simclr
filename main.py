@@ -5,15 +5,6 @@ import argparse
 
 from torch.utils.tensorboard import SummaryWriter
 
-apex = False
-try:
-    from apex import amp
-    apex = True
-except ImportError:
-    print(
-        "Install the apex package from https://www.github.com/nvidia/apex to use fp16 for training"
-    )
-
 from model import load_model, save_model
 from modules import NT_Xent
 from modules.sync_batchnorm import convert_model
