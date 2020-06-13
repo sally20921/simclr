@@ -23,7 +23,7 @@ python3 main.py
 
 # test the model
 ```
-python3 -m testing.logistic_regression with model_path=./logs/0 
+python3 -m testing.logistic_regression
 ```
 
 # result
