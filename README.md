@@ -8,6 +8,11 @@ that measure the similarity between two features.
 - x- is data point dissimilar to x, referred to as negative sample
 - a softmax classifier can be built that classifies positive and negative samples correctly
 
+# method
+## transfer via a Linear Classifier
+- We trained an L2-regularized multinomial logistic regression classifier on features extracted from the frozen pretrained network. 
+
+
 
 # train the model 
 
