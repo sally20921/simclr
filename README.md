@@ -37,5 +37,6 @@ python3 -m testing.logistic_regression
 - ResNet: ResNet50
 - epochs: 100
 - optimizer: Adam
-- dataset: STL-10
-- result:  0.829
+- dataset: CIFAR10
+- temperature: 0.5
+- result:  0.741
