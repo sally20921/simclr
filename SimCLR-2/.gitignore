@@ -1,0 +1,17 @@
+# python virtual environment
+venv
+
+# python cache
+__pycache__
+
+# PyCharm user config
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/misc.xml
+
+# specific project folders
+input
+output
